@@ -1,0 +1,66 @@
+% Task 1
+i = imread("flowers.jpg");
+figure, imshow(i);
+h = ones(5,5);
+i2 = imfilter(i,h)
+figure, imshow(i2)
+
+% Task 2
+coins = imread("coins.png");
+figure, imshow(coins);
+h2 = [-1 0 1; -1 0 1; -1 0 1];
+coins2 = imfilter(coins,h2);
+figure, imshow(coins2);
+
+% Task 3
+figure, imshow(coins);
+h3 = [1 0 -1; 1 0 -1; 1 0 -1];
+coins3 = imfilter(coins,h3);
+figure, imshow(coins3);
+
+% Task 4
+figure, imshow(coins);
+h4 = [-1 -1 -1; -1 8 -1; -1 -1 -1];
+coins4 = imfilter(coins,h4);
+figure, imshow(coins4);
+
+% Task 5
+figure, imshow(coins);
+h5 = [0 -1 0; -1 4 -1; 0 -1 0];
+coins5 = imfilter(coins,h5);
+figure, imshow(coins5);
+
+% Task 6
+peppers = imread("peppers.png");
+figure, imshow(peppers);
+h6 = fspecial('motion', 50, 45);
+peppers6 = imfilter(peppers,h6);
+figure, imshow(peppers6);
+
+h7 = fspecial('average', [3 3]);
+peppers7 = imfilter(peppers,h7);
+figure, imshow(peppers7);
+
+h8 = fspecial('disk', 5);
+peppers8 = imfilter(peppers,h8);
+figure, imshow(peppers8);
+
+h9 = fspecial('gaussian', [3 3], 0.5);
+peppers9 = imfilter(peppers,h9);
+figure, imshow(peppers9);
+
+h10 = fspecial('laplacian', 0.2);
+peppers10 = imfilter(peppers,h10);
+figure, imshow(peppers10);
+
+h11 = fspecial('log', [3 3], 0.5);
+peppers11 = imfilter(peppers,h11);
+figure, imshow(peppers11);
+
+h12 = fspecial('prewitt');
+peppers12 = imfilter(peppers,h12);
+figure, imshow(peppers12);
+
+h13 = fspecial('sobel');
+peppers13 = imfilter(peppers,h13);
+figure, imshow(peppers13);
